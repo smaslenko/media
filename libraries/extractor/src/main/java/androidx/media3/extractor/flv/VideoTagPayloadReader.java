@@ -115,10 +115,10 @@ import androidx.media3.extractor.TrackOutput;
         nalUnitLengthFieldLength = hevcConfig.nalUnitLengthFieldLength;
         format = new Format.Builder()
             .setSampleMimeType(MimeTypes.VIDEO_H265)
-            .setCodecs(null)
-            .setWidth(0)
-            .setHeight(0)
-            .setPixelWidthHeightRatio(0)
+            .setCodecs(hevcConfig.codecs)
+            .setWidth(hevcConfig.width)
+            .setHeight(hevcConfig.height)
+            .setPixelWidthHeightRatio(hevcConfig.pixelWidthHeightRatio)
             .setInitializationData(hevcConfig.initializationData)
             .build();
       }
